@@ -1,0 +1,54 @@
+package shirts;
+
+import javax.swing.*;
+
+public class GUI {
+	JFrame frame;
+	
+	JLabel lbl1;
+	JLabel lbl2;
+	JComboBox cmb1;
+	JLabel lbl3;
+	JRadioButton rbn1;
+	JRadioButton rbn2;
+	JRadioButton rbn3;
+	
+	GUI() {
+		frame = new JFrame();
+		
+		lbl1 = new JLabel("Customize Shirt");
+		lbl1.setBounds(4, 0, 900, 40);
+		
+		lbl2 = new JLabel("Color");
+		lbl2.setBounds(4, 30, 900, 40);
+		
+		String[] items = {"Red", "Blue", "Yellow", "Violet", "Indigo", "Green", "Purple", "Black"};
+		cmb1 = new JComboBox(items);
+		cmb1.setBounds(4, 70, 120, 30);
+		
+		lbl3 = new JLabel("Size");
+		lbl3.setBounds(4, 100, 900, 40);
+		
+		rbn1 = new JRadioButton("Small");
+		rbn1.setBounds(4, 130, 70, 30);
+		
+		rbn2 = new JRadioButton("Medium");
+		rbn2.setBounds(80, 130, 70, 30);
+		
+		rbn3 = new JRadioButton("Large");
+		rbn3.setBounds(200, 130, 70, 30);
+
+		frame.add(lbl1);
+		frame.add(lbl2);
+		frame.add(cmb1);
+		frame.add(lbl3);
+		frame.add(rbn1);
+		frame.add(rbn2);
+		frame.add(rbn3);
+		frame.setLayout(null);
+		frame.setTitle("Shirts");
+		frame.setSize(300, 500);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+}

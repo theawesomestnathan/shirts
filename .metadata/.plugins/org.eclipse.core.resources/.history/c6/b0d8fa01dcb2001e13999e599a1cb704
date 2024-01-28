@@ -1,0 +1,47 @@
+package big_name;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+
+public class GUI2 {
+	private JFrame frame;
+	
+	private JTextArea textarea;
+	
+	private JButton btn;
+	
+	GUI2(Boolean chk1, Boolean chk2, Boolean chk3) {
+		frame = new JFrame();
+		
+		textarea = new JTextArea();
+		textarea.setBounds(10, 5, 100, 100);
+		
+		if (chk1) {
+			textarea.setText("Bria\n");
+		}
+		if (chk2) {
+			textarea.setText("Nathan\n");
+		}
+		if (chk3) {
+			textarea.setText("KC\n");
+		}
+		
+		btn = new JButton("Bacl");
+		btn.setBounds(10, 70, 150, 59);
+		btn.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+
+			}
+		});
+		
+		frame.add(textarea);
+		frame.setLayout(null);
+		frame.setSize(325, 400);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setTitle("epic application");
+	}
+}

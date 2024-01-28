@@ -1,0 +1,34 @@
+package shirts;
+
+import javax.swing.*;
+
+public class GUI {
+	JFrame frame;
+	
+	JLabel lbl1;
+	JLabel lbl2;
+	JComboBox cmb1;
+	
+	GUI() {
+		frame = new JFrame();
+		
+		lbl1 = new JLabel("Customize Shirt");
+		lbl1.setBounds(4, 0, 900, 40);
+		
+		lbl2 = new JLabel("Color");
+		lbl2.setBounds(4, 30, 900, 40);
+		
+		String[] items = {"Red", "Blue", "Yellow", "Violet", "Indigo", "Green", "Purple", "Black"};
+		cmb1 = new JComboBox(items);
+		cmb1.setBounds(4, 40, 900, 40);
+		
+		frame.add(lbl1);
+		frame.add(lbl2);
+		frame.add(cmb1);
+		frame.setLayout(null);
+		frame.setTitle("Gender Form");
+		frame.setSize(300, 500);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+}

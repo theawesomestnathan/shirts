@@ -1,0 +1,23 @@
+package shirts;
+
+import javax.swing.*;
+
+public class GUI {
+	JFrame frame;
+	
+	JLabel lbl1;
+	
+	GUI() {
+		frame = new JFrame();
+		
+		lbl1 = new JLabel("Customize Shirt");
+		lbl1.setBounds(1, 2, 900, 50);
+		
+		frame.add(lbl1);
+		frame.setLayout(null);
+		frame.setTitle("Gender Form");
+		frame.setSize(300, 500);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+	}
+}
